@@ -4,6 +4,10 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Sneakers;
+use App\Models\User;
+use App\Models\Type;
+use App\Models\Brand;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,11 +18,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        Sneakers::truncate();
+        User::truncate();
+        Brand::truncate();
+        Type::truncate();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $this->call([
+            TypeSeeder::class
+        ]);
+
+        Sneakers::factory(10)->create();
     }
 }
