@@ -2,12 +2,14 @@
 
 namespace Database\Factories;
 
+use App\Models\Brand;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class SneakerFactory extends Factory
+class SneakersFactory extends Factory
 {
     /**
      * Define the model's default state.
