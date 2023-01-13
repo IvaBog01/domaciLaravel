@@ -22,7 +22,7 @@ class SneakersFactory extends Factory
             'model'=>$this->faker->word(),
             'color'=>$this->faker->word(),
             'releaseYear'=>$this->faker->numberBetween(1950,2022),
-            'sneakers_id'=>Sneakers::factory(),
+            'brand_id'=>Brand::factory(),
             'type_id'=>$this->faker->numberBetween(1,4),
             'user_id'=>User::factory()
         ];

@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Type;
 
-use Illuminate\Database\Factories\SneakersFactory;
+use Illuminate\Database\Factories\TypeFactory;
 
 
 class TypeSeeder extends Seeder
