@@ -24,12 +24,13 @@ Route::post('/register',[AuthController::class,'register']);
 Route::post('/login',[AuthController::class,'login']);
 
 
- Route::get('sneakers/brand/{id}',[SneakersController::class,'getByBrand']);
+Route::get('sneakers/brand/{id}',[SneakersController::class,'getByBrand']);
 
- Route::get('sneakers/type/{id}',[SneakersController::class,'getByType']);
+Route::get('sneakers/type/{id}',[SneakersController::class,'getByType']);
 
+Route::delete('sneakers/type/{id}',[SneakersController::class,'getByType']);
 
- Route::group(['middleware' => ['auth:sanctum']], function () {
+Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/profile', function(Request $request) {
         return auth()->user();
     });
